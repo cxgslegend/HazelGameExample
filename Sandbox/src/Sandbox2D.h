@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Hazel.h"
-#include "Camera/OrthographicFollowCameraController.h"
+#include "GameObjects/Camera/OrthographicFollowCameraController.h"
 
 class Sandbox2D : public Hazel::Layer
 {
@@ -16,7 +16,8 @@ public:
 	virtual void OnImGuiRender() override;
 	void OnEvent(Hazel::Event& e) override;
 private:
-	Hazel::OrthographicFollowCameraController m_CameraController;
+	OrthographicFollowCameraController m_CameraController;
+	
 	
 	// Temp
 	Hazel::Ref<Hazel::VertexArray> m_SquareVA;
